@@ -9,6 +9,9 @@
 import Foundation
 import SwiftUI
 
+/// View-model does not talks to the views, the views talk to the view-model.
+/// There can be n number of views that can talk to the view-model. Think of it like a doorway or a portal to the model which is private to the views.
+/// That is why it is made a class so that multiple views can share the portal (view-model)
 class EmojiMemoryGame {
     
     private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
