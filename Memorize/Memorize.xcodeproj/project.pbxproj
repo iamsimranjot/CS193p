@@ -15,6 +15,7 @@
 		70641BB4247593F6007FC8BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70641BB2247593F6007FC8BA /* LaunchScreen.storyboard */; };
 		70641BBC24768AD2007FC8BA /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70641BBB24768AD2007FC8BA /* MemoryGame.swift */; };
 		70641BBE24768C19007FC8BA /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70641BBD24768C19007FC8BA /* EmojiMemoryGame.swift */; };
+		70641BC024813CF1007FC8BA /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70641BBF24813CF1007FC8BA /* Grid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		70641BB5247593F6007FC8BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70641BBB24768AD2007FC8BA /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = SOURCE_ROOT; };
 		70641BBD24768C19007FC8BA /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
+		70641BBF24813CF1007FC8BA /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				70641BA7247593F2007FC8BA /* AppDelegate.swift */,
 				70641BA9247593F2007FC8BA /* SceneDelegate.swift */,
 				70641BAB247593F2007FC8BA /* EmojiMemoryGameView.swift */,
+				70641BBF24813CF1007FC8BA /* Grid.swift */,
 				70641BAD247593F6007FC8BA /* Assets.xcassets */,
 				70641BB2247593F6007FC8BA /* LaunchScreen.storyboard */,
 				70641BB5247593F6007FC8BA /* Info.plist */,
@@ -157,6 +160,7 @@
 				70641BBC24768AD2007FC8BA /* MemoryGame.swift in Sources */,
 				70641BAC247593F2007FC8BA /* EmojiMemoryGameView.swift in Sources */,
 				70641BBE24768C19007FC8BA /* EmojiMemoryGame.swift in Sources */,
+				70641BC024813CF1007FC8BA /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
