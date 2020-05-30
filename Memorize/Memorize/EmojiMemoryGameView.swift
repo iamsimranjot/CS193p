@@ -10,16 +10,20 @@ import SwiftUI
 
 struct EmojiMemoryGameView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
+    
     var body: some View {
-        return HStack {
-            ForEach(viewModel.cards) { card in
-                CardView(card: card).onTapGesture {
-                    self.viewModel.choose(card: card)
-                }
+        Grid(viewModel.cards) { card in
+            CardView(card: card).onTapGesture {
+                self.viewModel.choose(card: card)
             }
+            .padding(self.gridPadding)
         }
         .padding()
     }
+    
+    // MARK: Drawing Constants
+    
+    let gridPadding: CGFloat = 5;
 }
 
 struct CardView: View {
@@ -42,8 +46,7 @@ struct CardView: View {
                 RoundedRectangle(cornerRadius: cornerRadius).fill()
             }
         }
-        .foregroundColor(.orange)
-        .aspectRatio(2/3, contentMode: .fit)
+        .foregroundColor(.orange)        
         .font(Font.system(size: fontSize(for: size)))
     }
     
