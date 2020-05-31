@@ -21,14 +21,14 @@ class EmojiMemoryGame: ObservableObject {
         
     static func createMemoryGame() -> MemoryGame<String> {
         let emojis = availableEmojis.shuffled()
-        return MemoryGame<String>(numberOfPairsOfCards: Int.random(in: 2...5)) { pairIndex in
+        return MemoryGame<String>(numberOfPairsOfCards: Int.random(in: 2...8)) { pairIndex in
             emojis[pairIndex]
         }
     }
     
     // MARK: - Access to the Model
     
-    var cards: Array<MemoryGame<String>.Card> {
+    var cards: [MemoryGame<String>.Card] {
         model.cards
     }
     
