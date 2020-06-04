@@ -13,7 +13,7 @@ struct EmojiMemoryGameView: View {
     
     var body: some View {
         Grid(viewModel.cards) { card in
-            CardView(card: card).onTapGesture {
+            CardView(card: card, primaryColor: self.viewModel.theme.primaryColor).onTapGesture {
                 self.viewModel.choose(card: card)
             }
                 .padding(self.gridPadding)
@@ -28,6 +28,7 @@ struct EmojiMemoryGameView: View {
 
 struct CardView: View {
     var card: MemoryGame<String>.Card
+    var primaryColor: Color
     
     var body: some View {
         GeometryReader { geometry in
@@ -48,7 +49,7 @@ struct CardView: View {
                 }
             }
         }
-            .foregroundColor(.orange)
+            .foregroundColor(primaryColor)
             .font(Font.system(size: fontSize(for: size)))
     }
     

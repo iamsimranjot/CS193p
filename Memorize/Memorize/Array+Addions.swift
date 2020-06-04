@@ -1,5 +1,5 @@
 //
-//  Array+Only.swift
+//  Array+Addions.swift
 //  Memorize
 //
 //  Created by SimranJot Singh on 31/05/20.
@@ -11,5 +11,5 @@ import Foundation
 extension Array {
     var only: Element? {
         count == 1 ? first : nil
-    }    
+    }
 }

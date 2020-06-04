@@ -16,15 +16,25 @@ import SwiftUI
 /// ObservableObject only works with classes
 class EmojiMemoryGame: ObservableObject {
     
-    @Published private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
-    private static let availableEmojis = ["👻", "🎃", "🕷", "🧛🏻", "🧟‍♂️", "🥶", "💩", "🌚", "🍆", "🍭", "🎈", "⚽️"]
+    @Published private var model: MemoryGame<String>
+    var theme: EmojiTheme
+    
+    init() {
+        theme = EmojiMemoryGame.loadNewTheme()
+        model = EmojiMemoryGame.createMemoryGame(for: theme)
+    }
         
-    static func createMemoryGame() -> MemoryGame<String> {
-        let emojis = availableEmojis.shuffled()
-        return MemoryGame<String>(numberOfPairsOfCards: Int.random(in: 2...8)) { pairIndex in
+    static func createMemoryGame(for theme: EmojiTheme) -> MemoryGame<String> {
+        
+        let emojis = theme.availableEmojis.shuffled()
+        return MemoryGame<String>(numberOfPairsOfCards: theme.numberOfPairs) { pairIndex in
             emojis[pairIndex]
         }
     }
+    
+    static func loadNewTheme() -> EmojiTheme {
+        return Themes.allCases.map {$0.content()}.shuffled().first!
+    }    
     
     // MARK: - Access to the Model
     
