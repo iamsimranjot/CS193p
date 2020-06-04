@@ -23,6 +23,7 @@ extension Themes {
         case .halloween:
             return EmojiTheme(name: "Halloween",
                               availableEmojis: ["👻", "🎃", "🕷", "🧛🏻", "🧟‍♂️", "🥶", "💩", "🌚", "🍆", "🍭", "🎈", "⚽️"],
+                              numberOfPairs: 6,
                               primaryColor: .orange)
         case .flags:
             return EmojiTheme(name: "Flags",
@@ -65,7 +66,7 @@ struct EmojiTheme {
         self.primaryColor = primaryColor
         self.secondaryColor = secondaryColor
         self.availableEmojis = availableEmojis
-        self.numberOfPairs = numberOfPairs ?? Int.random(in: 2...availableEmojis.count)
+        self.numberOfPairs = numberOfPairs ?? Int.random(in: 5...availableEmojis.count)
     }
 }
 
