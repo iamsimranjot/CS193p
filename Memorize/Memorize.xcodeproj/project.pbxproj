@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70116154248960B400CA27F0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70116153248960B400CA27F0 /* CardView.swift */; };
 		70641BA8247593F2007FC8BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70641BA7247593F2007FC8BA /* AppDelegate.swift */; };
 		70641BAA247593F2007FC8BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70641BA9247593F2007FC8BA /* SceneDelegate.swift */; };
 		70641BAC247593F2007FC8BA /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70641BAB247593F2007FC8BA /* EmojiMemoryGameView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70116153248960B400CA27F0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		70641BA4247593F2007FC8BA /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70641BA7247593F2007FC8BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70641BA9247593F2007FC8BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				700868AA248959F40068E613 /* View Models */,
 				70641BBF24813CF1007FC8BA /* Grid.swift */,
 				70641BAB247593F2007FC8BA /* EmojiMemoryGameView.swift */,
+				70116153248960B400CA27F0 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				70641BBE24768C19007FC8BA /* EmojiMemoryGame.swift in Sources */,
 				70641BC424821B99007FC8BA /* Array+Identifiable.swift in Sources */,
 				70641BC224814734007FC8BA /* GridLayout.swift in Sources */,
+				70116154248960B400CA27F0 /* CardView.swift in Sources */,
 				70641BC024813CF1007FC8BA /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
