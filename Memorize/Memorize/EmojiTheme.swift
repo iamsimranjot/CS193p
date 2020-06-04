@@ -11,6 +11,10 @@ import SwiftUI
 enum Themes: CaseIterable {
     case halloween
     case flags
+    case sports
+    case vehicles
+    case animals
+    case faces
 }
 
 extension Themes {
@@ -24,6 +28,22 @@ extension Themes {
             return EmojiTheme(name: "Flags",
                               availableEmojis: ["🇦🇷", "🇦🇺", "🇨🇦", "🇿🇦", "🇮🇳", "🇩🇰", "🇪🇺", "🏳️‍🌈", "🇺🇸"],
                               primaryColor: .green)
+        case .sports:
+            return EmojiTheme(name: "Sports",
+                              availableEmojis:["⚽️", "🏀", "🏈", "⚾️", "🎱", "🏏", "🏸", "⛷"],
+                              primaryColor: .red)
+        case .vehicles:
+            return EmojiTheme(name: "Vehicles",
+                              availableEmojis:["🚗", "🚌", "🏎", "🚑", "🚲", "🛵", "✈️", "🚢"],
+                              primaryColor: .black)
+        case .animals:
+            return EmojiTheme(name: "Animals",
+                              availableEmojis:["🐶", "🐼", "🐮", "🐷", "🐵", "🐔", "🦄", "🐙"],
+                              primaryColor: .gray)
+        case .faces:
+            return EmojiTheme(name: "Faces",
+                              availableEmojis:["🙃", "😇", "😱", "🤩", "🥳", "🥶", "🤯", "🤬"],
+                              primaryColor: .pink)
         }
     }
 }
