@@ -35,6 +35,7 @@ struct CardView: View {
                 }
             }
         }
+            .foregroundColor(primaryColor)
             .font(Font.system(size: fontSize(for: size)))
     }
     
