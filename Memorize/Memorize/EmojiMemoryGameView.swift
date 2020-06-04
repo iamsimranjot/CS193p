@@ -31,6 +31,8 @@ struct EmojiMemoryGameView: View {
                 }
                     .padding(self.gridPadding)
             }
+            Divider()
+            Text("Score: \(viewModel.score)").font(.headline)
         }
                 .padding()
     }
