@@ -56,10 +56,10 @@
 		700868A62489595E0068E613 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				700868AA248959F40068E613 /* View Models */,
-				70641BBF24813CF1007FC8BA /* Grid.swift */,
-				70641BAB247593F2007FC8BA /* EmojiMemoryGameView.swift */,
 				70116153248960B400CA27F0 /* CardView.swift */,
+				70641BAB247593F2007FC8BA /* EmojiMemoryGameView.swift */,
+				70641BBF24813CF1007FC8BA /* Grid.swift */,
+				700868AA248959F40068E613 /* View Models */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,12 +129,12 @@
 			children = (
 				70641BA7247593F2007FC8BA /* AppDelegate.swift */,
 				70641BA9247593F2007FC8BA /* SceneDelegate.swift */,
+				700868A8248959A90068E613 /* Extensions */,
 				700868A9248959C90068E613 /* Layout */,
 				700868A7248959730068E613 /* Models */,
-				700868A62489595E0068E613 /* Views */,
-				700868A8248959A90068E613 /* Extensions */,
-				700868AB24895A0A0068E613 /* Resources */,
 				70641BAF247593F6007FC8BA /* Preview Content */,
+				700868AB24895A0A0068E613 /* Resources */,
+				700868A62489595E0068E613 /* Views */,
 			);
 			path = Memorize;
 			sourceTree = "<group>";
