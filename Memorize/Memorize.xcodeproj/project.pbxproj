@@ -31,7 +31,7 @@
 		70641BB0247593F6007FC8BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		70641BB3247593F6007FC8BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70641BB5247593F6007FC8BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70641BBB24768AD2007FC8BA /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = SOURCE_ROOT; };
+		70641BBB24768AD2007FC8BA /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MemoryGame.swift; path = Memorize/Models/MemoryGame.swift; sourceTree = SOURCE_ROOT; };
 		70641BBD24768C19007FC8BA /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		70641BBF24813CF1007FC8BA /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		70641BC124814734007FC8BA /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
@@ -51,6 +51,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		700868A62489595E0068E613 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				700868AA248959F40068E613 /* View Models */,
+				70641BBF24813CF1007FC8BA /* Grid.swift */,
+				70641BAB247593F2007FC8BA /* EmojiMemoryGameView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		700868A7248959730068E613 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				70641BBB24768AD2007FC8BA /* MemoryGame.swift */,
+				70641BC72488ABF9007FC8BA /* EmojiTheme.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		700868A8248959A90068E613 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				70641BC52482ED32007FC8BA /* Array+Addions.swift */,
+				70641BC324821B99007FC8BA /* Array+Identifiable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		700868A9248959C90068E613 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				70641BC124814734007FC8BA /* GridLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		700868AA248959F40068E613 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				70641BBD24768C19007FC8BA /* EmojiMemoryGame.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		700868AB24895A0A0068E613 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				70641BAD247593F6007FC8BA /* Assets.xcassets */,
+				70641BB2247593F6007FC8BA /* LaunchScreen.storyboard */,
+				70641BB5247593F6007FC8BA /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		70641B9B247593F2007FC8BA = {
 			isa = PBXGroup;
 			children = (
@@ -70,19 +124,13 @@
 		70641BA6247593F2007FC8BA /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
-				70641BBB24768AD2007FC8BA /* MemoryGame.swift */,
-				70641BC72488ABF9007FC8BA /* EmojiTheme.swift */,
-				70641BC52482ED32007FC8BA /* Array+Addions.swift */,
-				70641BBD24768C19007FC8BA /* EmojiMemoryGame.swift */,
 				70641BA7247593F2007FC8BA /* AppDelegate.swift */,
 				70641BA9247593F2007FC8BA /* SceneDelegate.swift */,
-				70641BAB247593F2007FC8BA /* EmojiMemoryGameView.swift */,
-				70641BC124814734007FC8BA /* GridLayout.swift */,
-				70641BBF24813CF1007FC8BA /* Grid.swift */,
-				70641BC324821B99007FC8BA /* Array+Identifiable.swift */,
-				70641BAD247593F6007FC8BA /* Assets.xcassets */,
-				70641BB2247593F6007FC8BA /* LaunchScreen.storyboard */,
-				70641BB5247593F6007FC8BA /* Info.plist */,
+				700868A9248959C90068E613 /* Layout */,
+				700868A7248959730068E613 /* Models */,
+				700868A62489595E0068E613 /* Views */,
+				700868A8248959A90068E613 /* Extensions */,
+				700868AB24895A0A0068E613 /* Resources */,
 				70641BAF247593F6007FC8BA /* Preview Content */,
 			);
 			path = Memorize;

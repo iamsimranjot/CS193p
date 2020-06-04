@@ -8,6 +8,28 @@
 
 import SwiftUI
 
+struct EmojiTheme {
+    
+    let name: String
+    let availableEmojis: [String]
+    var numberOfPairs: Int
+    let primaryColor: Color
+    let secondaryColor: Color
+    
+    init(name: String,
+         availableEmojis: [String],
+         numberOfPairs: Int? = nil,
+         primaryColor: Color,
+         secondaryColor: Color = .white) {
+        
+        self.name = name
+        self.primaryColor = primaryColor
+        self.secondaryColor = secondaryColor
+        self.availableEmojis = availableEmojis
+        self.numberOfPairs = numberOfPairs ?? Int.random(in: 5...availableEmojis.count)
+    }
+}
+
 enum Themes: CaseIterable {
     case halloween
     case flags
@@ -46,27 +68,6 @@ extension Themes {
                               availableEmojis:["🙃", "😇", "😱", "🤩", "🥳", "🥶", "🤯", "🤬"],
                               primaryColor: .pink)
         }
-    }
-}
-
-struct EmojiTheme {
-    let name: String
-    let availableEmojis: [String]
-    var numberOfPairs: Int
-    let primaryColor: Color
-    let secondaryColor: Color
-    
-    init(name: String,
-         availableEmojis: [String],
-         numberOfPairs: Int? = nil,
-         primaryColor: Color,
-         secondaryColor: Color = .white) {
-        
-        self.name = name
-        self.primaryColor = primaryColor
-        self.secondaryColor = secondaryColor
-        self.availableEmojis = availableEmojis
-        self.numberOfPairs = numberOfPairs ?? Int.random(in: 5...availableEmojis.count)
     }
 }
 
