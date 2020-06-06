@@ -43,7 +43,7 @@ extension Themes {
         switch self {
         case .halloween:
             return EmojiTheme(name: "Halloween",
-                              availableEmojis: ["👻", "🎃", "🕷", "🧛🏻", "🧟‍♂️", "🥶", "💩", "🌚", "🍆", "🍭", "🎈", "⚽️"],
+                              availableEmojis: ["👻", "🎃", "🕷", "🧛🏻", "🧟‍♂️", "🕸", "🦸‍♂️", "🧙", "🧝‍♂️", "🧜‍♂️", "🧚‍♂️", "🧞‍♂️"],
                               numberOfPairs: 6,
                               primaryColor: .orange)
         case .flags:
