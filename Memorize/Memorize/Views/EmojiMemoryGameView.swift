@@ -17,16 +17,16 @@ struct EmojiMemoryGameView: View {
                 Text(viewModel.theme.name).font(.largeTitle)
                 Spacer(minLength: spacerMinLength)
                 Button(action: viewModel.newGame) {
-                    Text(newGameLabel)
+                    Text(newGameLabel)                        
                         .padding(newGameButtonPadding)
                         .foregroundColor(.white)
-                        .background(viewModel.theme.primaryColor)
+                        .background(viewModel.theme.fillColor)
                         .cornerRadius(newGameButtonCornerRadius)
                         .font(.subheadline)
                 }
             }
             Grid(viewModel.cards) { card in
-                CardView(card: card, primaryColor: self.viewModel.theme.primaryColor).onTapGesture {
+                CardView(card: card, fillColor: self.viewModel.theme.fillColor).onTapGesture {
                     self.viewModel.choose(card: card)
                 }
                     .padding(self.gridPadding)
@@ -34,7 +34,7 @@ struct EmojiMemoryGameView: View {
             Divider()
             Text(scoreLabel + "\(viewModel.score)").font(.headline)
         }
-                .padding()
+            .padding()
     }
     
     // MARK: Drawing Constants

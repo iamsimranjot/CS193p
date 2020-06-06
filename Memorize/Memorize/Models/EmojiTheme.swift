@@ -12,7 +12,7 @@ struct EmojiTheme {
     let name: String
     let availableEmojis: [String]
     let numberOfPairs: Int
-    let primaryColor: Color
+    let fillColor: Color
     let secondaryColor: Color
     
     init(name: String,
@@ -22,7 +22,7 @@ struct EmojiTheme {
          secondaryColor: Color = .white) {
         
         self.name = name
-        self.primaryColor = primaryColor
+        self.fillColor = primaryColor
         self.secondaryColor = secondaryColor
         self.availableEmojis = availableEmojis
         self.numberOfPairs = numberOfPairs ?? Int.random(in: 5...availableEmojis.count)
