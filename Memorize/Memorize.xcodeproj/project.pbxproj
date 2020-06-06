@@ -58,7 +58,6 @@
 			children = (
 				70116153248960B400CA27F0 /* CardView.swift */,
 				70641BAB247593F2007FC8BA /* EmojiMemoryGameView.swift */,
-				70641BBF24813CF1007FC8BA /* Grid.swift */,
 				700868AA248959F40068E613 /* View Models */,
 			);
 			path = Views;
@@ -85,6 +84,7 @@
 		700868A9248959C90068E613 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				70641BBF24813CF1007FC8BA /* Grid.swift */,
 				70641BC124814734007FC8BA /* GridLayout.swift */,
 			);
 			path = Layout;
