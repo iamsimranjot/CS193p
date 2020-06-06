@@ -2,4 +2,8 @@
 
 #### Memorize
 
+- [x] Assignment 1
+- [x] Assignment 2
+- [ ] Assignment 3
+
 ![Memorize Screenshot](Images/Memorize_1.png)
