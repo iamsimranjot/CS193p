@@ -15,13 +15,13 @@ struct EmojiMemoryGameView: View {
         VStack {
             HStack {
                 Text(viewModel.theme.name).font(.largeTitle)
-                Spacer(minLength: 10.0)
+                Spacer(minLength: spacerMinLength)
                 Button(action: viewModel.newGame) {
-                    Text("New Game")
-                        .padding(13)
+                    Text(newGameLabel)
+                        .padding(newGameButtonPadding)
                         .foregroundColor(.white)
                         .background(viewModel.theme.primaryColor)
-                        .cornerRadius(10)
+                        .cornerRadius(newGameButtonCornerRadius)
                         .font(.subheadline)
                 }
             }
@@ -32,14 +32,20 @@ struct EmojiMemoryGameView: View {
                     .padding(self.gridPadding)
             }
             Divider()
-            Text("Score: \(viewModel.score)").font(.headline)
+            Text(scoreLabel + "\(viewModel.score)").font(.headline)
         }
                 .padding()
     }
     
     // MARK: Drawing Constants
     
-    let gridPadding: CGFloat = 5;
+    private let newGameLabel: String = "New Game"
+    private let scoreLabel: String = "Score: "
+    
+    private let gridPadding: CGFloat = 5.0
+    private let spacerMinLength: CGFloat = 10.0
+    private let newGameButtonPadding: CGFloat = 13.0
+    private let newGameButtonCornerRadius: CGFloat = 10.0
 }
 
 struct ContentView_Previews: PreviewProvider {

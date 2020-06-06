@@ -8,11 +8,10 @@
 
 import SwiftUI
 
-struct EmojiTheme {
-    
+struct EmojiTheme {    
     let name: String
     let availableEmojis: [String]
-    var numberOfPairs: Int
+    let numberOfPairs: Int
     let primaryColor: Color
     let secondaryColor: Color
     

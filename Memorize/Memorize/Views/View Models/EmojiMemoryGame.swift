@@ -17,14 +17,14 @@ import SwiftUI
 class EmojiMemoryGame: ObservableObject {
     
     @Published private var model: MemoryGame<String>
-    var theme: EmojiTheme
+    private(set) var theme: EmojiTheme
     
     init() {
         theme = EmojiMemoryGame.loadNewTheme()
         model = EmojiMemoryGame.createMemoryGame(for: theme)
     }
         
-    static func createMemoryGame(for theme: EmojiTheme) -> MemoryGame<String> {
+    private static func createMemoryGame(for theme: EmojiTheme) -> MemoryGame<String> {
         
         let emojis = theme.availableEmojis.shuffled()
         return MemoryGame<String>(numberOfPairsOfCards: theme.numberOfPairs) { pairIndex in
@@ -32,7 +32,7 @@ class EmojiMemoryGame: ObservableObject {
         }
     }
     
-    static func loadNewTheme() -> EmojiTheme {
+    private static func loadNewTheme() -> EmojiTheme {
         return Themes.allCases.map {$0.content()}.shuffled().first!
     }    
     
