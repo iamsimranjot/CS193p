@@ -11,7 +11,7 @@ import SwiftUI
 struct Pie: Shape {
     var startAngle: Angle
     var endAngle: Angle
-    var clockwise: Bool = true
+    var clockwise: Bool = true    
     
     func path(in rect: CGRect) -> Path {
         let center = CGPoint(x: rect.midX, y: rect.midY)
@@ -32,6 +32,4 @@ struct Pie: Shape {
         path.addLine(to: center)
         return path
     }
-    
-    
 }

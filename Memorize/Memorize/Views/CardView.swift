@@ -25,7 +25,7 @@ struct CardView: View {
                 Pie(startAngle: Angle.degrees(pieStartAngle),
                     endAngle: Angle.degrees(pieEndAngle))
                     .padding(pieViewPadding)
-                    .opacity(pieViewOpacity)
+                    .opacity(pieViewOpacity)                    
                 Text(card.content)
                     .font(Font.system(size: fontSize(for: size)))
                     .rotationEffect(Angle.degrees(card.isMatched ?
