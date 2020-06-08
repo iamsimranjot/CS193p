@@ -24,15 +24,17 @@ struct CardView: View {
             ZStack {
                 Pie(startAngle: Angle.degrees(pieStartAngle),
                     endAngle: Angle.degrees(pieEndAngle))
-                        .padding(pieViewPadding)
-                        .opacity(pieViewOpacity)
+                    .padding(pieViewPadding)
+                    .opacity(pieViewOpacity)
                 Text(card.content)
                     .font(Font.system(size: fontSize(for: size)))
-                    .rotationEffect(Angle.degrees(card.isMatched ? contentMaxRotationAngle : contentMinRotationAngle))
-                    .animation(card.isMatched ? Animation.linear(duration: rotationDuration).repeatForever(autoreverses: false) : .default)
+                    .rotationEffect(Angle.degrees(card.isMatched ?
+                        contentMaxRotationAngle : contentMinRotationAngle))
+                    .animation(card.isMatched ?
+                        Animation.linear(duration: rotationDuration).repeatForever(autoreverses: false) : .default)
             }
-                .cardify(faceup: card.isFaceUp, fillColor: fillColor)
-                .transition(.scale)
+            .cardify(faceup: card.isFaceUp, fillColor: fillColor)
+            .transition(.scale)
         }
     }
     
