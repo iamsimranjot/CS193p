@@ -19,21 +19,33 @@ struct CardView: View {
     }
     
     @ViewBuilder
-    private func body(for size: CGSize) -> some View {        
+    private func body(for size: CGSize) -> some View {
         if card.isFaceUp || !card.isMatched {
             ZStack {
-                Pie(startAngle: Angle.degrees(0-90),
-                    endAngle: Angle.degrees(110-90))
-                        .padding(5)
-                        .opacity(0.4)
+                Pie(startAngle: Angle.degrees(pieStartAngle),
+                    endAngle: Angle.degrees(pieEndAngle))
+                        .padding(pieViewPadding)
+                        .opacity(pieViewOpacity)
                 Text(card.content)
                     .font(Font.system(size: fontSize(for: size)))
+                    .rotationEffect(Angle.degrees(card.isMatched ? contentMaxRotationAngle : contentMinRotationAngle))
+                    .animation(card.isMatched ? Animation.linear(duration: rotationDuration).repeatForever(autoreverses: false) : .default)
             }
                 .cardify(faceup: card.isFaceUp, fillColor: fillColor)
+                .transition(.scale)
         }
     }
     
     // MARK: Drawing Constant
+    
+    private let pieViewPadding: CGFloat = 5
+    private let pieViewOpacity: Double = 0.4
+    private let pieStartAngle: Double = 0-90
+    private let pieEndAngle: Double = 110-90
+    
+    private let rotationDuration: Double = 1
+    private let contentMinRotationAngle: Double = 0
+    private let contentMaxRotationAngle: Double = 360
     
     private func fontSize(for size: CGSize) -> CGFloat {
         min(size.width, size.height) * 0.65

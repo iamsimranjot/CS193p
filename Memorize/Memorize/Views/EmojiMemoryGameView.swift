@@ -16,8 +16,12 @@ struct EmojiMemoryGameView: View {
             HStack {
                 Text(viewModel.theme.name).font(.largeTitle)
                 Spacer(minLength: spacerMinLength)
-                Button(action: viewModel.newGame) {
-                    Text(newGameLabel)                        
+                Button(action: {
+                    withAnimation(.easeInOut) {
+                        self.viewModel.newGame()
+                    }
+                }) {
+                    Text(newGameLabel)
                         .padding(newGameButtonPadding)
                         .foregroundColor(.white)
                         .background(viewModel.theme.fillColor)
@@ -27,7 +31,9 @@ struct EmojiMemoryGameView: View {
             }
             Grid(viewModel.cards) { card in
                 CardView(card: card, fillColor: self.viewModel.theme.fillColor).onTapGesture {
-                    self.viewModel.choose(card: card)
+                    withAnimation(.linear(duration: self.cardFlipDuration)) {
+                        self.viewModel.choose(card: card)
+                    }
                 }
                     .padding(self.gridPadding)
             }
@@ -41,6 +47,8 @@ struct EmojiMemoryGameView: View {
     
     private let newGameLabel: String = "New Game"
     private let scoreLabel: String = "Score: "
+    
+    private let cardFlipDuration: Double = 0.7
     
     private let gridPadding: CGFloat = 5.0
     private let spacerMinLength: CGFloat = 10.0

@@ -57,7 +57,7 @@ extension Themes {
         case .vehicles:
             return EmojiTheme(name: "Vehicles",
                               availableEmojis:["🚗", "🚌", "🏎", "🚑", "🚲", "🛵", "✈️", "🚢"],
-                              primaryColor: .black)
+                              primaryColor: .accentColor)
         case .animals:
             return EmojiTheme(name: "Animals",
                               availableEmojis:["🐶", "🐼", "🐮", "🐷", "🐵", "🐔", "🦄", "🐙"],
