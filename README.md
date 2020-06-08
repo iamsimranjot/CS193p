@@ -7,12 +7,16 @@
 - [x] Lecture 3
 - [x] Lecture 4
 - [x] Lecture 5
-- [ ] Lecture 6
+- [x] Lecture 6
+- [  ] Lecture 7
+- [  ] Lecture 8
 
 ---
 
 - [x] Assignment 1
 - [x] Assignment 2
 - [ ] Assignment 3
+- [ ] Assignment 4
+- [ ] Assignment 5
 
 ![Memorize Screenshot](Images/Memorize_1.png)
