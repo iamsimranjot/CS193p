@@ -12,9 +12,18 @@ struct CardView: View {
     private(set) var card: MemoryGame<String>.Card
     private(set) var fillColor: Color
     
+    @State private var animatedBonusRemaining: Double = 0
+    
     var body: some View {
         GeometryReader { geometry in
             self.body(for: geometry.size)
+        }
+    }
+    
+    private func startBonusTimeAnimation() {
+        animatedBonusRemaining = card.bonusRemaining
+        withAnimation(.linear(duration: card.bonusTimeRemaining)) {
+            animatedBonusRemaining = 0
         }
     }
     
@@ -22,10 +31,19 @@ struct CardView: View {
     private func body(for size: CGSize) -> some View {
         if card.isFaceUp || !card.isMatched {
             ZStack {
-                Pie(startAngle: Angle.degrees(pieStartAngle),
-                    endAngle: Angle.degrees(pieEndAngle))
-                    .padding(pieViewPadding)
-                    .opacity(pieViewOpacity)                    
+                Group {
+                    if card.isConsumingBonusTime {
+                        Pie(startAngle: Angle.degrees(pieStartAngle),
+                            endAngle: Angle.degrees(-animatedBonusRemaining*360-90))
+                            .onAppear() {
+                                self.startBonusTimeAnimation()
+                        }
+                    } else {
+                        Pie(startAngle: Angle.degrees(pieStartAngle), endAngle: Angle.degrees(-card.bonusRemaining*360-90))
+                    }
+                }
+                .padding(pieViewPadding)
+                .opacity(pieViewOpacity)
                 Text(card.content)
                     .font(Font.system(size: fontSize(for: size)))
                     .rotationEffect(Angle.degrees(card.isMatched ?
