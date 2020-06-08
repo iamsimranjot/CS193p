@@ -8,8 +8,8 @@
 - [x] Lecture 4
 - [x] Lecture 5
 - [x] Lecture 6
-- [  ] Lecture 7
-- [  ] Lecture 8
+- [ ] Lecture 7
+- [ ] Lecture 8
 
 ---
 
